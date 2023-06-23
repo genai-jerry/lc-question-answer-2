@@ -62,9 +62,7 @@ def input_personality():
     return var
 
 # read the API key from the environment variable
-var = input("Please enter your openAI key: ")
-openai.api_key = var
-print(openai.api_key)
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 training_set = input_training_data()
 print(training_set)
